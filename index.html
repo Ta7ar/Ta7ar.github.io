@@ -127,10 +127,17 @@
     ctx.canvas.height = window.innerHeight;
     ctx.canvas.width = window.innerWidth;
     function main() {
+      let windowWidth = window.innerWidth;
+      let windowHeight = window.innerHeight;
       window.addEventListener("resize", function () {
-        ctx.canvas.height = window.innerHeight;
-        ctx.canvas.width = window.innerWidth;
-        starfieldJS(canvas);
+        if (
+          windowHeight != window.innerHeight ||
+          windowWidth != window.innerWidth
+        ) {
+          ctx.canvas.height = window.innerHeight;
+          ctx.canvas.width = window.innerWidth;
+          starfieldJS(canvas);
+        }
       });
       starfieldJS(canvas);
     }
