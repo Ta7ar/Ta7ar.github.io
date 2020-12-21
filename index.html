@@ -23,9 +23,9 @@
     <header style="margin-top: 75px"><h1>Imon Tatar</h1></header>
     <section class="about">
       <p>
-        I'm a student from University at Buffalo studying Computer Science.
-        Passionate about web development and currently getting my feet wet in
-        quantitative trading. Just trying to learn as much as I can.
+        Currently studying Computer Science at University at Buffalo. Passionate
+        about web development and currently getting my feet wet in quantitative
+        trading. Just trying to learn as much as I can.
       </p>
     </section>
     <section class="projects">
@@ -35,7 +35,7 @@
         style="
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-          grid-gap: 40px;
+          grid-gap: 48px;
           -webkit-box-pack: justify;
           -ms-flex-pack: justify;
           justify-content: space-between;
@@ -50,8 +50,43 @@
             Classic game taken online. Made using Node + websockets and React.
           </p>
         </div>
+        <div class="project">
+          <a href="https://flippycards.herokuapp.com/"
+            ><img src="images/quizlet.png" style="max-width: 100%"
+          /></a>
+          <h3>Quizlet Clone</h3>
+          <p>
+            Flashcards web app made using MongoDB, Express, React and Node with
+            JWT authentication.
+          </p>
+        </div>
+        <div class="project">
+          <a href="https://vector-field-gen.herokuapp.com/"
+            ><img src="images/vector.png" style="max-width: 100%"
+          /></a>
+          <h3>Vector Field Generator</h3>
+          <p>
+            Create Vector Field Diagrams from vector equations. Made using React
+            and HTML Canvas.
+          </p>
+        </div>
       </div>
     </section>
+    <section class="contact">
+      <h2>Contact me</h2>
+      <p>Always looking for cool stuff to do.</p>
+      <ul style="list-style-type: none; padding: 0">
+        <li>
+          <a href="https://github.com/Ta7ar">GitHub</a>
+        </li>
+        <li style="margin-top: 10px">
+          <a href="mailto:imonkall@buffalo.edu">Email</a>
+        </li>
+      </ul>
+    </section>
+    <footer style="margin-top: 100px; height: 150px; color: #969696">
+      © Imon Tatar — 2020
+    </footer>
   </body>
   <style>
     section {
@@ -59,6 +94,20 @@
     }
     section p {
       line-height: 1.75rem;
+    }
+    ::selection {
+      color: #b194ee;
+      background-color: black;
+    }
+    * {
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.35);
     }
   </style>
 </html>
