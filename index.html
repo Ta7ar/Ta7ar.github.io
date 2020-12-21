@@ -15,22 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
-    <script type="text/javascript" src="starfield.js"></script>
     <title>Imon Tatar</title>
   </head>
 
   <body style="margin: 0 auto; width: 1000px; max-width: 90vw">
-    <canvas
-      id="starfield"
-      style="
-        z-index: -1;
-        background-color: black;
-        margin: 0 auto;
-        position: fixed;
-        top: 0;
-        left: 0;
-      "
-    ></canvas>
     <header style="margin-top: 75px"><h1>Imon Tatar</h1></header>
     <section class="about">
       <p>
@@ -121,26 +109,4 @@
       border-bottom: 1px solid hsla(0, 0%, 100%, 0.35);
     }
   </style>
-  <script type="text/javascript">
-    var canvas = document.getElementById("starfield");
-    var ctx = canvas.getContext("2d");
-    ctx.canvas.height = window.innerHeight;
-    ctx.canvas.width = window.innerWidth;
-    function main() {
-      let windowWidth = window.innerWidth;
-      let windowHeight = window.innerHeight;
-      window.addEventListener("resize", function () {
-        if (
-          windowHeight != window.innerHeight ||
-          windowWidth != window.innerWidth
-        ) {
-          ctx.canvas.height = window.innerHeight;
-          ctx.canvas.width = window.innerWidth;
-          starfieldJS(canvas);
-        }
-      });
-      starfieldJS(canvas);
-    }
-    main();
-  </script>
 </html>
