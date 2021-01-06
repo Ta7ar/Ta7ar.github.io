@@ -1,0 +1,50 @@
+body {
+  margin: 0 auto;
+  width: 1000px;
+  max-width: 90vw;
+}
+
+body.dark {
+  color: whitesmoke;
+  background-color: black;
+  --highlight-color: #b194ee;
+  --anchortag-color: whitesmoke;
+}
+
+body.light {
+  color: black;
+  background-color: whitesmoke;
+  --highlight-color: orange;
+  --anchortag-color: black;
+}
+
+section,
+header {
+  margin-top: 75px;
+}
+
+section p {
+  line-height: 1.5rem;
+}
+::selection {
+  color: var(--highlight-color);
+}
+* {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+a {
+  color: var(--anchortag-color);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--anchortag-color);
+}
+
+.fas {
+  font-size: 1.25rem;
+  padding: 5px;
+}
+
+.fas:hover {
+  cursor: pointer;
+}

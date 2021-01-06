@@ -2,8 +2,7 @@
   lang="en"
   style="
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
-    color: whitesmoke;
+
     font-size: 1.1rem;
   "
 >
@@ -15,11 +14,27 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link href="./styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/353fb52fb7.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Imon Tatar</title>
   </head>
 
-  <body style="margin: 0 auto; width: 1000px; max-width: 90vw">
-    <header style="margin-top: 75px"><h1>Imon Tatar</h1></header>
+  <body class="dark" id="body">
+    <header>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        "
+      >
+        <h1>Imon Tatar</h1>
+        <i class="fas fa-moon" id="toggle-icon" onclick="toggleDayNight()"></i>
+      </div>
+    </header>
     <section class="about">
       <p>
         Currently studying Computer Science at University at Buffalo. Passionate
@@ -86,27 +101,18 @@
     <footer style="margin-top: 100px; height: 150px; color: #969696">
       © Imon Tatar — 2020
     </footer>
+    <script>
+      function toggleDayNight() {
+        var bodyElem = document.getElementById("body");
+        var iconElem = document.getElementById("toggle-icon");
+        if (bodyElem.className === "dark") {
+          bodyElem.className = "light";
+          iconElem.className = "fas fa-sun";
+        } else {
+          bodyElem.className = "dark";
+          iconElem.className = "fas fa-moon";
+        }
+      }
+    </script>
   </body>
-  <style>
-    section {
-      margin-top: 75px;
-    }
-    section p {
-      line-height: 1.5rem;
-    }
-    ::selection {
-      color: #b194ee;
-      background-color: black;
-    }
-    * {
-      -webkit-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out;
-    }
-
-    a {
-      color: whitesmoke;
-      text-decoration: none;
-      border-bottom: 1px solid hsla(0, 0%, 100%, 0.35);
-    }
-  </style>
 </html>
