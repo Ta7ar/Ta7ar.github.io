@@ -30,8 +30,8 @@ section p {
   color: var(--highlight-color);
 }
 * {
-  -webkit-transition: all 0.1s ease;
-  transition: all 0.1s ease;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 a {
@@ -47,4 +47,8 @@ a {
 
 .fas:hover {
   cursor: pointer;
+}
+
+.fa-github {
+  color: whitesmoke;
 }
